@@ -4,24 +4,46 @@
 	<title>Div and background</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		h1{
-			text-align:center;
-			margin-top: 200px;
+		body {
+    			font-size: 100%;
+		}	
+		button{
+			background-color: black;
+			padding: 0px 250px;
+			border: 10px solid white;
+			border-radius: 25px;
+			color: white;
+			font-size: 1.5em;
 		}
-		div
+		button:hover{
+			background-color: white;
+			border-color: black;
+			color:black;
+		}
+		div.container
 		{
 			max-width: 100%;
-			height: 600px;
-			border: 1px solid grey;
-			background-image: url("check.PNG");
+			height: 620px;
+			background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS0GvHNVUT567ZuaN6-LFBEPBKCm-Ub_xeXJd2c5xmirlhkQpI1");
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: 100% 100%;
+			position:relative;
+		}
+		div.search{
+			position:absolute;
+			color:white;
+			font-size:2.4em;
+			text-align:center;
+			top:250px;
+			left:280px;
 		}
 	</style>
 </head>
 <body>
-	<div>
-		<h1>Try Me!!!</h1>
+	<div class="container">
+		<div class="search">Tired of Searching Perfect Product??<br/>
+			<button>Try Me!!</button>
+		</div>
 	</div>
 </body>
 </html>

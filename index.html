@@ -62,22 +62,30 @@
     			padding: 20px;
     			overflow: hidden;
 		}
-		hr { 
-			height: 30px;
-  			border-style: solid; 
-  			border-color: #8c8b8b; 
-  			border-width: 1px 0 0 0; 
-  			border-radius: 20px; 
-		} 
-		hr:before { 
-  			display: block; 
-  			content: ""; 
-  			height: 30px; 
-  			margin-top: -31px; 
-  			border-style: solid; 
-  			border-color: #8c8b8b; 
-  			border-width: 0 0 1px 0; 
-  			border-radius: 20px; 
+		hr.faded {
+  			clear: both;
+  			float: none;
+  			width: 30%;
+  			height: 1px;
+  			margin: 1.4em 0;
+  			border: none;
+  			background: #ddd;
+  			background-image: -webkit-gradient(
+      				linear,
+      				left bottom,
+      				right bottom,
+      				color-stop(0, rgb(255,255,255)),
+      				color-stop(0.1, rgb(221,221,221)),
+      				color-stop(0.9, rgb(221,221,221)),
+      				color-stop(1, rgb(255,255,255))
+  				);
+  			background-image: -moz-linear-gradient(
+				left center,
+      				rgb(255,255,255) 0%,
+      				rgb(221,221,221) 10%,
+      				rgb(221,221,221) 90%,
+      				rgb(255,255,255) 100%
+  				);
 		}
 		i{
 			color: rgb(120, 204, 245);

@@ -81,15 +81,18 @@
 			position: fixed;
 			
 		}
-		div.scrolling:hover {
-			background-color: rgba(0,0,0,0.2); 
-  			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+		div.dotted{
+			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
   			-webkit-background-size: 3px 3px;
   			-moz-background-size: 3px 3px;
-  			background-size: 3px 3px;	
+  			background-size: 3px 3px;
+			overflow: auto;
+		}
+		div.scrolling:hover {
+			background-color: rgba(0,0,0,0.2); 	
 		}
 		div.logo{
 			margin-left: 7%;
@@ -151,15 +154,17 @@
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="scrolling" id="header-sroll">
-			<div class="logo">
-				<a href="\"><h1 id="test">Tinglado</h1></a>
+	<div class="dotted">
+		<div class="container">
+			<div class="scrolling" id="header-sroll">
+				<div class="logo">
+					<a href="\"><h1 id="test">Tinglado</h1></a>
+				</div>
 			</div>
-		</div>
-		<div class="search">
-			<h1>Tired of Searching Perfect LMS??</h1>
-			<h2>Try Me!!</h2>
+			<div class="search">
+				<h1>Tired of Searching Perfect LMS??</h1>
+				<h2>Try Me!!</h2>
+			</div>
 		</div>
 	</div>
 	<div class="features">

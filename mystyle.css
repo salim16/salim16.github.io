@@ -1,0 +1,136 @@
+body {
+    			font-size: 100%;
+    			margin: 0;
+    			padding: 0;
+		}
+		h1{
+			color: 	rgb(255,255,255);
+			font-size: 2.5em;
+		}
+		div.logo h1{
+			font-family: "Brush Script MT", cursive;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 500;
+			line-height: 15.4px;
+			font-size: 2.8em;
+			color: rgb(120, 204, 245);
+		}
+		#test:hover{
+			color: 	rgb(255,255,255);
+		}
+		h2{
+			color: rgb(255,255,255);
+			font-size: 2.0em;
+			text-align:center;
+			background-color: rgb(120, 204, 245);
+			border: 2px solid rgb(255,255,255);
+			border-radius: 25px;
+		}
+		#header-sroll.bgg{
+			background-color: rgb(0,0,0);
+		}
+		h2:hover{
+			background-color: rgba(120, 204, 245,0.8);
+			border: 2px solid rgb(255,255,255);
+			color: rgb(255,255,255);
+		}
+		h3{
+			font-size: 1.2em;
+			text-align: center;
+			margin: 0px;
+		}
+		p{
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+		}
+		div.container
+		{
+			max-width: 100%;
+			min-height: 650px;
+			background-image: url("http://fullhdpictures.com/wp-content/uploads/2016/03/Blur-Pictures.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			overflow: auto;
+		}
+		div.scrolling{
+			width: 100%;
+			height: 80px;
+			position: fixed;
+			
+		}
+		div.dotted {
+			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
+  			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
+  			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
+  			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
+  			-webkit-background-size: 3px 3px;
+  			-moz-background-size: 3px 3px;
+  			background-size: 3px 3px;
+			overflow: auto;
+			min-height: 650px;
+			max-width: 100%;
+		}
+		div.scrolling:hover {
+			background-color: rgba(0,0,0,0.2); 	
+		}
+		div.logo{
+			margin-left: 7%;
+			width: 130px;
+			
+		}
+		div.search{
+			padding: 180px 27%;
+			max-width: 45%;
+		}
+		div.features{
+			background: rgba(128,128,128,0.1);
+			max-width: 100%;
+			overflow: auto;
+		}
+		.floating-box {
+    			display: inline-block;
+    			width: 250px;
+    			height: 190px;
+    			margin: 20px;
+    			padding: 20px;
+    			overflow: hidden;
+		}
+		.floating-box:hover{
+			background: rgba(128,128,128,0.2);
+		}
+		hr {
+			clear: both;
+			float: none;
+  			height: 1px;
+  			width: 40%;
+  			border: none;
+  			background: #8c8b8b;
+  			background-image: -webkit-gradient(
+      				linear,
+      				left bottom,
+      				right bottom,
+      				color-stop(0, rgb(255,255,255)),
+      				color-stop(0.1, rgb(221,221,221)),
+      				color-stop(0.4, rgb(190,190,190)),
+      				color-stop(0.6, rgb(190,190,190)),
+      				color-stop(0.9, rgb(221,221,221)),
+      				color-stop(1, rgb(255,255,255))
+  				);
+  			background-image: -moz-linear-gradient(
+				left center,
+      				rgb(255,255,255) 0%,
+      				rgb(221,221,221) 10%,
+      				rgb(190,190,190) 40%,
+      				rgb(190,190,190) 60%,
+      				rgb(221,221,221) 90%,
+      				rgb(255,255,255) 100%
+  				);
+		}
+		i{
+			color: rgb(120, 204, 245);
+			margin-left: 105px;
+		}

@@ -1,133 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Navigation</title>
-<style>
-	body{
-		margin:0;
-		padding:0;
-	}
-	.container{
-		max-width: 100%;
-		overflow: auto;
-		
-		position:relative;
-		height: 1350px;	
-	}
-	.v-nav{
-			width:18%;
-			height:700px;
-			background: rgba(128,128,128,0.1);
-			overflow-y:scroll;
-			position:fixed;
-	}
-	.description{
-			position:absolute;
-			right:0;
-    			width: 82%;
-			background-color:wheat;
-	}
-	h2{
-		text-align:center;
-	}
-	ul{
-		max-width:100%;
-		margin:0;
-		padding:0;
-		list-style-type:none;
-		}
-	li a{
-		display:block;
-		text-decoration:none;
-		padding: 8px 16px;
-		color: rgb(0,0,0);
-	}
-	li a:hover {
-    		background-color: #555;
-    		color: white;
-	}
-</style>
+	<title>Div and background</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="scroll.js"></script>
+	
 </head>
 <body>
-<div class="container">
-	<div class="v-nav">
-	<h2> CSS Tutorial </h2>
-	<ul>
-		<li><a href="#CSS HOME">CSS HOME</a></li>
-		<li><a href="#CSS Introduction">CSS Introduction</a></li>
-		<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-<li><a href="#CSS Introduction">CSS Introduction</a></li>
-
-	</ul>
+		<div class="container">
+			<div class="dotted">
+				<div class="scrolling" id="header-sroll">
+					<div class="logo">
+						<a href="\"><h1 id="test">MyWebpage</h1></a>
+					</div>
+				</div>
+				<div class="search">
+					<h1>Exploring my Webpage??</h1>
+					<h2>Hit Me!!</h2>
+				</div>
+			</div>
+		</div>
+	<div class="features">
+		<h1 style="color:rgb(120, 204, 245);text-align:center;">Features of my WebPage</h1>
+		<hr/>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">smoking_rooms</i><h3>EXTRAORDINARY</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">group</i><h3>SIMPLE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">public</i><h3>ATTRACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem  Ipsum</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">folder</i><h3>LESS LOAD TIME</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">mode_comment</i><h3>DISCUSSION FORUM</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">notifications_active</i><h3>ANNOUNCEMENTS</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
+		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
 	</div>
-	<div class="description">
-	<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-<h1> Testing</h1>
-
-</div>
-</div>
 </body>
 </html>

@@ -17,15 +17,31 @@
 			 }
 		});
 	</script>
+	<script>
+		$(document).ready(function(){
+  			$("a").on('click', function(event) {
+    				if (this.hash !== "") {
+      				event.preventDefault();
+      				var hash = this.hash;
+      			$('html, body').animate({
+        			scrollTop: $(hash).offset().top
+      			}, 500, function(){
+        			window.location.hash = hash;
+      			});
+    		} 
+  		});
+	});
+</script>
 	<style>
 		body {
     			font-size: 100%;
     			margin: 0;
-    			padding: 0;
+    			padding: 0px;
 		}
 		h1{
 			color: 	rgb(255,255,255);
 			font-size: 2.5em;
+			text-align:center;
 		}
 		div.logo h1{
 			font-family: "Brush Script MT", cursive;
@@ -103,7 +119,7 @@
 			display:inline-block;
 		}
 		div.search{
-			padding: 180px 27%;
+			margin: 220px 27%;
 			max-width: 45%;
 		}
 		div.features{
@@ -174,21 +190,22 @@
     			padding: 10px 26px;
     			text-decoration: none;	
 		}
-
 		li a.active{
 			border-bottom:3px solid rgb(120, 204, 245);
 		}
-
 		li a:hover:not(.active) {
     			color: rgb(255,255,255);
 			border-bottom: 3px solid rgb(120, 204, 245);
 		}
-		
+		#features, #contact, #about, #home{
+			padding-top: 80px;
+    			margin-top: -80px;
+		}
 		
 	</style>
 </head>
 <body>
-		<div class="container">
+		<div class="container" id="home">
 			<div class="dotted">
 				<div class="scrolling" id="header-sroll">
 					<div class="logo">
@@ -197,7 +214,7 @@
 					<div class="nav">
 						<ul>
 							<li><a href="#home" class="active"><h3>Home</h3></a></li>
-							<li><a href="#Features"><h3>Features</h3></a></li>
+							<li><a href="#features"><h3>Features</h3></a></li>
 							<li><a href="#contact"><h3>Contact</h3></a></li>
 							<li><a href="#about"><h3>About</h3></a></li>
 						</ul>
@@ -209,7 +226,8 @@
 				</div>
 			</div>
 		</div>
-	<div class="features">
+	
+	<div class="features" id="features">
 		<h1 style="color:rgb(120, 204, 245);text-align:center;">Features of my WebPage</h1>
 		<hr/>
 		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
@@ -220,6 +238,7 @@
 		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">mode_comment</i><h3>DISCUSSION FORUM</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
 		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">notifications_active</i><h3>ANNOUNCEMENTS</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
 		<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
+
 	</div>
 </body>
 </html>

@@ -11,12 +11,28 @@
 		$(window).scroll(function () {
      			var sc = $(window).scrollTop()
     			if (sc > 120) {
-        			$("#header-sroll").addClass("bgg")
+        			$("#header-sroll").addClass("bgg");
+				$(".logo").stop().animate({"top":"0px"},"fast");
+				$(".nav").stop().animate({"top":"0px"},"fast");
+				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
+				
     			} else {
-				 $("#header-sroll").removeClass("bgg")
+				$("#header-sroll").removeClass("bgg");
+				$(".logo").stop().animate({"top":"15px"},"fast");
+				$(".nav").stop().animate({"top":"10px"},"fast");
+				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
+				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
 			 }
+		
 		});
 	</script>
+
+	
 	<script>
 		$(document).ready(function(){
   			$("a").on('click', function(event) {
@@ -25,7 +41,7 @@
       				var hash = this.hash;
       			$('html, body').animate({
         			scrollTop: $(hash).offset().top
-      			}, 500, function(){
+      			}, 900, function(){
         			window.location.hash = hash;
       			});
     		} 
@@ -48,8 +64,8 @@
 			font-style: normal;
 			font-variant: normal;
 			font-weight: 500;
-			line-height:15.4px;
-			font-size: 2.8em;
+			line-height:0px;
+			font-size: 2.4em;
 			color: rgb(120, 204, 245);
 		}
 		#test:hover{
@@ -62,9 +78,11 @@
 			background-color: rgb(120, 204, 245);
 			border: 2px solid rgb(255,255,255);
 			border-radius: 25px;
+			
 		}
 		#header-sroll.bgg{
 			background-color: rgb(0,0,0);
+			height:55px;
 		}
 		h2:hover{
 			background-color: rgba(120, 204, 245,0.8);
@@ -75,6 +93,7 @@
 			font-size: 1.2em;
 			text-align: center;
 			margin: 0px;
+			
 		}
 		p{
 			text-align: center;
@@ -91,12 +110,20 @@
 			background-size: cover;
 			background-position: center;
 			overflow: auto;
+			
 		}
 		div.scrolling{
 			width: 100%;
-			height: 80px;
+			height: 90px;
 			position: fixed;
-			overflow: hidden;
+			overflow: hidden;	
+		}
+		div.test{
+			width:100%;
+			height:90px;
+			position:relative;
+			overflow:hidden;
+			border: 1px solid black;
 		}
 		div.dotted {
 			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
@@ -114,13 +141,18 @@
 			background-color: rgba(0,0,0,0.2); 	
 		}
 		div.logo{
-			margin-left: 7%;
-			width: 180px;
+			position: absolute;
+			left: 7%;
+			width: 200px;
+			height:50px;
 			display:inline-block;
+			top:15px;		
 		}
+		
 		div.search{
-			margin: 200px 27%;
+			margin: 220px 27%;
 			max-width: 45%;
+			
 		}
 		div.features{
 			background: rgba(128,128,128,0.1);
@@ -133,7 +165,7 @@
     			height: 190px;
     			margin: 20px;
     			padding: 20px;
-    			overflow: hidden;
+    			overflow: hidden;	
 		}
 		
 		hr {
@@ -169,25 +201,30 @@
 			margin-left: 105px;
 		}
 		.nav{
-			width: 450px;
+			width: 480px;
 			display:inline-block;
-			margin-left: 43%;
-			height: 70px;	
+			left: 60%;
+			height: 55px;	
+			position:absolute;
+			top:10px;
 		}
 		ul{
 			list-style-type: none;
     			margin: 0;
     			padding: 0;
     			overflow: hidden;
+			
+			
 		}
 		li {
     			float:left;
+			
 		}
 		li a {
    			display: block;
     			color: rgb(255,255,255);
     			text-align: center;
-    			padding: 10px 26px;
+    			padding: 14px 26px;
     			text-decoration: none;	
 		}
 		li a.active{
@@ -198,8 +235,8 @@
 			border-bottom: 3px solid rgb(120, 204, 245);
 		}
 		#features, #contact, #about, #home{
-			padding-top: 80px;
-    			margin-top: -80px;
+			padding-top:90px;
+			margin-top:-90px;
 		}
 		
 	</style>
@@ -208,16 +245,18 @@
 		<div class="container" id="home">
 			<div class="dotted">
 				<div class="scrolling" id="header-sroll">
-					<div class="logo">
-						<a href="\"><h1 id="test">MyWebpage</h1></a>
-					</div>
-					<div class="nav">
-						<ul>
-							<li><a href="#home" class="active"><h3>Home</h3></a></li>
-							<li><a href="#features"><h3>Features</h3></a></li>
-							<li><a href="#contact"><h3>Contact</h3></a></li>
-							<li><a href="#about"><h3>About</h3></a></li>
-						</ul>
+					<div class="test">
+						<div class="logo">
+							<a href="\"><h1 id="test">MyWebpage</h1></a>
+						</div>
+						<div class="nav">
+							<ul>
+								<li><a href="#home" class="active"><h3>Home</h3></a></li>
+								<li><a href="#features"><h3>Features</h3></a></li>
+								<li><a href="#contact"><h3>Contact</h3></a></li>
+								<li><a href="#about"><h3>About</h3></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="search">

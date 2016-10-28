@@ -111,7 +111,6 @@
 			background-size: cover;
 			background-position: center;
 			overflow: auto;
-			
 		}
 		div.scrolling{
 			width: 100%;
@@ -127,10 +126,10 @@
 			border: 1px solid black;
 		}
 		div.dotted {
-			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
-  			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
-  			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
-  			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 100%);
+			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
+  			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
+  			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
+  			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
   			-webkit-background-size: 3px 3px;
   			-moz-background-size: 3px 3px;
   			background-size: 3px 3px;
@@ -156,7 +155,7 @@
 			
 		}
 		div.features{
-			background: rgba(128,128,128,0.1);
+			background-color: rgba(128,128,128,0.1);
 			max-width: 100%;
 			overflow: auto;
 		}
@@ -243,7 +242,31 @@
 			padding-top:55px;
 			margin-top:-55px;
 		}
+		div.con{
+			max-width: 100%;
+			min-height: 400px;
+			background-image: url("https://avatars.yandex.net/get-500px/b886c03223974dfd80f2146efea158f8/orig/");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			overflow: auto;
+		}
+		div.advance_con{
+			max-width:100%;
+			min-height:400px;
+			overflow:auto;
+			background-color:rgba(0,0,0,0.8);
+		}
+		div.advance_con h1{
+			padding:40px;
+			margin:20px;
+		}
 		
+		div.abt{
+				max-width:100%;
+				overflow:auto;
+				height:600px;
+		}
 	</style>
 </head>
 <body>
@@ -285,5 +308,17 @@
 			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
 		<div>
 	</div>
+	<div class="con">
+		<div class="advance_con" id="contact">
+			<h1>Call me anytime between 6pm to 10pm!</h1>
+			<h1>+91 9026574822</h1>
+		</div>
+	</div>
+	
+	<div class="abt" id="about">
+	
+	
+	</div>
+	
 </body>
 </html>

@@ -118,13 +118,17 @@
 			position: fixed;
 			overflow: hidden;	
 		}
+		div.scrolling:hover {
+			background-color: rgba(0,0,0,0.2); 	
+		}
 		div.test{
-			width:100%;
+			max-width:100%;
 			height:90px;
 			position:relative;
 			overflow:hidden;
 			border: 1px solid black;
 		}
+		
 		div.dotted {
 			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
   			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
@@ -137,9 +141,7 @@
 			min-height: 650px;
 			max-width: 100%;
 		}
-		div.scrolling:hover {
-			background-color: rgba(0,0,0,0.2); 	
-		}
+		
 		div.logo{
 			position: absolute;
 			left: 7%;
@@ -270,21 +272,41 @@
 		
 		div.footer{
 			max-width:100%;
-			height: 90px;
+			min-height: 65px;
 			overflow:auto;
 			background-color:rgb(0,0,0);
+			position:relative;
 		}
 		
-		div.footer p{
+		div.p_footer{
+			position:absolute;
+			max-width:50%;
+			height:10 px;
+			
+			display:inline-block;
+			left:40%;	
+		}
+		
+		div.p_footer p{
 			font-size: 1.2em;
-			color:white;
+			color:white;	
+			text-align:right;
 		}
-		div.footer img{
-			height:40px;
-			width:40px;
-			margin: 0px;
-			color: blue;
+		div.i_footer{
+			position:absolute;
+			max-width:40%;
+			height:10 px;
+			
+			display:inline-block;
+			left:50%;
+			top:10px;
 		}
+		div.i_footer img{
+			height:auto;
+			max-width:40px;
+			margin: 3px;
+		}
+		
 	</style>
 </head>
 <body>
@@ -339,7 +361,13 @@
 	</div>
 	<!-- footer -->
 	<div class="footer">
-			<p> Follow me on : <a href="https://www.facebook.com/saalim.iraqui "target="_blank"><img src="http://www.niftybuttons.com/wood/64px/facebook.png"></a></p>
+			<div class="p_footer">
+			<p> Follow me on : </p>
+			</div>
+			<div class="i_footer">
+			<a href="https://www.facebook.com/saalim.iraqui "target="_blank"><img src="http://www.niftybuttons.com/wood/64px/facebook.png"></a>
+			<a href="https://twitter.com/MOHDSAALIMKHAN" target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/twitter.png"></a>
+			</div>
 	</div>
 	
 </body>

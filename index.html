@@ -48,7 +48,14 @@
     		} 
   		});
 	});
-</script>
+	</script>
+	<script>
+			$(function(){
+				$('ul li a').on('click', function(){
+					$(this).parent().addClass('active').siblings().removeClass('active');
+				});
+			});
+	</script>
 	<style>
 		body {
     			font-size: 100%;
@@ -364,7 +371,7 @@
 						</div>
 						<div class="nav">
 							<ul>
-								<li><a href="#home" class="active"><h3>Home</h3></a></li>
+								<li class="active"><a href="#home"><h3>Home</h3></a></li>
 								<li><a href="#features"><h3>Features</h3></a></li>
 								<li><a href="#contact"><h3>Contact</h3></a></li>
 								<li><a href="#about"><h3>About</h3></a></li>

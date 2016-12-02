@@ -9,17 +9,50 @@
 		padding: 0px;
 		margin: 0px;
 	}
+	p,h1{
+		font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+	}
+	.desc p{
+		font-size: 0.8em;
+		color: #2F4F4F;
+	}
 	.form{
 		max-width: 350px;
 		overflow:auto;
 		border: 2px solid rgba(242,242,242,1);
-		margin: 100px auto;
+		margin: 70px auto 25px;
 		border-radius: 4px;
 		background-color: rgba(242,242,242,0.6);
 	}
+
+	.form-bottom{
+		margin: 5px 20px;
+		position: relative;
+		overflow:auto;
+		max-width: 400px;
+		height: 20px;
+	}
+	.left-hr{
+		width: 100px;
+		position: absolute;
+		left: 0px;	
+	}
+	.desc{
+		width: 150px;
+		position: absolute;
+		left: 100px;
+	}
+	.right-hr{
+		width: 100px;
+		position: absolute;
+		right: 0px;
+	}
+	.signup{
+		margin: 0px 20px 15px;
+	}
 	form{
-		padding:30px 20px;
-		margin:0px;
+		padding: 30px 20px;
+		margin: 0px;
 	}
 	h1{
 		padding: 0px;
@@ -43,14 +76,13 @@
 	    text-decoration: none;
 	}
 
-
 	a:hover {
-	    color: #4CAF50;
+	    color: rgba(84, 114, 188,1);
 	    text-decoration: underline;
 	}
 
 	a:active {
-	    color: #4CAF50;
+	    color: rgba(84, 114, 188,1);
 	    text-decoration: underline;
 	}
 
@@ -64,28 +96,42 @@
 		margin-bottom: 20px;
 	}
 	input:focus {
-    	border: 2px solid #4CAF50;
+    	border: 2px solid rgba(84, 114, 188,1);;
     	border-radius: 4px;
     	outline: none;
 }
 	input[type=submit] {
-    background-color: #4CAF50;
-    border: none;
+    background-color: rgba(84, 114, 188,0.6);
     color: white;
-    border: 2px solid #4CAF50;
+    border: 2px solid rgba(84, 114, 188,0.6);
     padding: 8px 12px;
     text-decoration: none;
     cursor: pointer;
     width: 100%;
     border-radius: 4px;
     margin-bottom: 20px;
+    outline: none;
 }
 input[type=submit]:hover {
-    background-color: #45a049;
-    border: 2px solid #45a049;
+    background-color: rgba(84, 114, 188,1);;
+    border: 2px solid rgba(84, 114, 188,1);;
+}
+button{
+	background-color: rgba(221,221,221,0.6);
+    border: 2px solid rgba(221,221,221,0.6);
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+}
+button:hover{
+	background-color: rgba(221,221,221,1);
+    border: 2px solid rgba(221,221,221,1);
 }
 .row{
-	
 	position: relative;
 	overflow:auto;
 	max-width: 400px;
@@ -101,6 +147,34 @@ input[type=submit]:hover {
 	position: absolute;
 	right:0px;
 }
+hr {
+			clear: both;
+			float: none;
+  			height: 1px;
+  			width: 100%;
+  			border: none;
+  			background: #8c8b8b;
+  			background-image: -webkit-gradient(
+      				linear,
+      				left bottom,
+      				right bottom,
+      				color-stop(0, rgb(255,255,255)),
+      				color-stop(0.1, rgb(221,221,221)),
+      				color-stop(0.4, rgb(190,190,190)),
+      				color-stop(0.6, rgb(190,190,190)),
+      				color-stop(0.9, rgb(221,221,221)),
+      				color-stop(1, rgb(255,255,255))
+  				);
+  			background-image: -moz-linear-gradient(
+				left center,
+					rgb(255,255,255) 0%,
+      				rgb(221,221,221) 10%,
+      				rgb(190,190,190) 40%,
+      				rgb(190,190,190) 60%,
+      				rgb(221,221,221) 90%,
+      				rgb(255,255,255) 100%
+  				);
+		}
 </style>
 
 <body>
@@ -118,7 +192,7 @@ input[type=submit]:hover {
 				<label for="password"><p>Password:</p></label>
 			</div>
 			<div class="right-row">
-				<p><a href=#>Forgot Password</a></p>
+				<p><a href=#>Forgot Password?</a></p>
 			</div>
 		</div>
 		<div>
@@ -133,7 +207,22 @@ input[type=submit]:hover {
 		Keep me signed in.
 		</div>
 </form>
-</div>
 
+	<div class="form-bottom">
+		<div class="left-hr"><hr></div>
+		<div class="desc"><p>New to Tinglado?</p></div>
+		<div class="right-hr"><hr></div> 
+	</div>
+
+	<div class="signup"> 
+		<button>Create your Tinglado account</button>
+	</div>
+</div>
+	<hr>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
 </body>
 </html>

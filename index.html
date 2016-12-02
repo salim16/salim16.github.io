@@ -1,439 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Div and background</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- <script src="scroll.js"></script> -->
-	
-	<script>
-		$(window).scroll(function () {
-     			var sc = $(window).scrollTop()
-    			if (sc > 120) {
-        			$("#header-sroll").addClass("bgg");
-				$(".logo").stop().animate({"top":"0px"},"fast");
-				$(".nav").stop().animate({"top":"0px"},"fast");
-				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
-				
-    			} else {
-				$("#header-sroll").removeClass("bgg");
-				$(".logo").stop().animate({"top":"15px"},"fast");
-				$(".nav").stop().animate({"top":"10px"},"fast");
-				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
-			 }
-		
-		});
-	</script>
-
-	
-	<script>
-		$(document).ready(function(){
-  			$("a").on('click', function(event) {
-    				if (this.hash !== "") {
-      				event.preventDefault();
-      				var hash = this.hash;
-      			$('html, body').animate({
-        			scrollTop: $(hash).offset().top
-      			}, 900, function(){
-        			window.location.hash = hash;
-      			});
-    		} 
-  		});
-	});
-	</script>
-	<script>
-			$(function(){
-				$('ul li a').on('click', function(){
-					$(this).parent().addClass('active').siblings().removeClass('active');
-				});
-			});
-	</script>
-	<style>
-		body {
-    			font-size: 100%;
-    			margin: 0;
-    			padding: 0px;
-		}
-		h1{
-			color: 	rgb(255,255,255);
-			font-size: 2.5em;
-			text-align:center;
-		}
-		div.logo h1{
-			font-family: "Brush Script MT", cursive;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 500;
-			line-height:0px;
-			font-size: 2.4em;
-			color: rgb(120, 204, 245);
-		}
-		#test:hover{
-			color: 	rgb(255,255,255);
-		}
-		h2{
-			color: rgb(255,255,255);
-			font-size: 2.0em;
-			text-align:center;
-			background-color: rgb(120, 204, 245);
-			border: 2px solid rgb(255,255,255);
-			border-radius: 25px;
-			
-		}
-		#header-sroll.bgg{
-			background-color: rgb(0,0,0);
-			height:55px;
-		}
-		h2:hover{
-			background-color: rgba(120, 204, 245,0.8);
-			border: 2px solid rgb(255,255,255);
-			color: rgb(255,255,255);
-		}
-		h3{
-			font-size: 1.2em;
-			text-align: center;
-			margin: 0px;	
-		}
-		p{
-			text-align: center;
-		}
-		a{
-			text-decoration: none;
-		}
-		div.container
-		{
-			max-width: 100%;
-			min-height: 650px;
-			background-image: url("http://fullhdpictures.com/wp-content/uploads/2016/03/Blur-Pictures.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			overflow: auto;
-		}
-		div.scrolling{
-			width: 100%;
-			height: 90px;
-			position: fixed;
-			overflow: hidden;	
-		}
-		div.scrolling:hover {
-			background-color: rgba(0,0,0,0.2); 	
-		}
-		div.test{
-			max-width:100%;
-			height:90px;
-			position:relative;
-			overflow:hidden;
-			border: 1px solid black;
-		}
-		div.dotted {
-			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			-webkit-background-size: 3px 3px;
-  			-moz-background-size: 3px 3px;
-  			background-size: 3px 3px;
-			overflow: auto;
-			min-height: 650px;
-			max-width: 100%;
-		}
-		div.logo{
-			position: absolute;
-			left: 7%;
-			max-width: 12%;
-			height:50px;
-			display:inline-block;
-			top:15px;	
-		}
-		
-		div.search{
-			margin: 220px 27%;
-			max-width: 45%;
-			
-		}
-		
-		hr {
-			clear: both;
-			float: none;
-  			height: 1px;
-  			width: 40%;
-  			border: none;
-  			background: #8c8b8b;
-  			background-image: -webkit-gradient(
-      				linear,
-      				left bottom,
-      				right bottom,
-      				color-stop(0, rgb(255,255,255)),
-      				color-stop(0.1, rgb(221,221,221)),
-      				color-stop(0.4, rgb(190,190,190)),
-      				color-stop(0.6, rgb(190,190,190)),
-      				color-stop(0.9, rgb(221,221,221)),
-      				color-stop(1, rgb(255,255,255))
-  				);
-  			background-image: -moz-linear-gradient(
-				left center,
-      				rgb(255,255,255) 0%,
-      				rgb(221,221,221) 10%,
-      				rgb(190,190,190) 40%,
-      				rgb(190,190,190) 60%,
-      				rgb(221,221,221) 90%,
-      				rgb(255,255,255) 100%
-  				);
-		}
-		i{
-			color: rgb(120, 204, 245);
-			margin-left: 105px;
-		}
-		.nav{
-			max-width: 50%;
-			display:inline-block;
-			left: 60%;
-			height: 55px;	
-			position:absolute;
-			top:10px;
-		}
-		ul{
-			list-style-type: none;
-    			margin: 0;
-    			padding: 0;
-    			overflow: hidden;
-			
-			
-		}
-		li {
-    			float:left;
-			
-		}
-		li a {
-   			display: block;
-    			color: rgb(255,255,255);
-    			text-align: center;
-    			padding: 14px 26px;
-    			text-decoration: none;	
-		}
-		li.active a{
-			border-bottom:3px solid rgb(120, 204, 245);
-		}
-		li a:hover {
-			border-bottom:3px solid rgb(120, 204, 245);
-		}
-		
-		
-		#features, #contact, #about, #home{
-			padding-top:55px;
-			margin-top:-55px;
-		}
-		div.con{
-			max-width: 100%;
-			min-height: 400px;
-			background-image: url("https://avatars.yandex.net/get-500px/b886c03223974dfd80f2146efea158f8/orig/");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			overflow: auto;
-		}
-		div.advance_con{
-			max-width:100%;
-			min-height:400px;
-			overflow:auto;
-			background-color:rgba(0,0,0,0.7);
-		}
-		div.advance_con h1{
-			padding:40px;
-			margin:20px;
-		}
-		div.footer{
-			max-width:100%;
-			min-height: 60px;
-			overflow:auto;
-			background-color:rgb(0,0,0);
-			position:relative;
-		}
-		div.p_footer{
-			position:absolute;
-			max-width:10%;
-			height:10 px;
-			display:inline-block;
-			left:38%;	
-		}
-		div.p_footer p{
-			font-size: 1.2em;
-			color:white;	
-			text-align:right;
-		}
-		div.i_footer{
-			position:absolute;
-			width:10%;
-			height:10 px;
-			display:inline-block;
-			left:50%;
-			top:10px;
-		}
-		div.i_footer img{
-			height:auto;
-			max-width:30px;
-			margin: 3px;
-		}
-		div.features{
-			background-color: rgba(128,128,128,0.1);
-			max-width: 100%;
-			overflow: auto;
-		}
-		div.advn_features{
-			max-width: 100%;
-			overflow: auto;
-		}
-		.floating-box {
-    			display: inline-block;
-    			width: 250px;
-    			height: 190px;
-    			margin: 20px;
-    			padding: 20px;
-    			overflow: hidden;	
-		}
-		div.abt{
-			max-width:100%;
-			overflow:auto;
-			background-color: rgb(255,255,255);
-		}
-		div.pic{
-				display: inline-block;
-    			max-width: 350px;
-    			height: 600px;
-    			overflow: hidden;	
-				margin-right:80px;
-		}
-		div.pic img{
-			max-width: 100%;
-			height: auto;
-			border-radius:50%;
-			padding: 80px 2px;
-			
-		}
-		div.pic h4{
-			text-align:center;
-			font-size:1.4em;
-			margin:0;
-			padding:0;
-		}
-		div.desc{
-			display: inline-block;
-    			max-width: 900px;
-    			height: 600px;
-    			overflow: hidden;	
-				
-		}
-		div.desc h1{
-			color: 	rgb(0,0,0);
-			text-align: left;
-			margin: 0px;
-			padding:20px 10px 0px;
-			
-		}
-		div.desc h2{
-			color: rgb(0,0,0);
-			text-align:left;
-			background-color: rgb(255,255,255);
-			border: none;
-			border-radius: 0px;
-			padding:10px;
-			
-		}
-		
-		div.desc h3{
-			text-align: left;
-			line-height:50px;
-			padding:0px 10px 0px;
-		}
-		
-		div.desc p{
-			text-align: justify;
-			line-height:25px;
-			padding:0px 10px 5px;
-		}
-	</style>
+	<title>Forms</title>
 </head>
+<style>
+	body{
+		padding: 0px;
+		margin: 0px;
+	}
+	.form{
+		max-width: 400px;
+		overflow:auto;
+		border: 2px solid rgba(242,242,242,1);
+		margin: 100px auto;
+		border-radius: 4px;
+		background-color: rgba(242,242,242,0.6);
+	}
+	form{
+		padding:30px 20px;
+		margin:0px;
+	}
+	h1{
+		padding: 0px;
+		margin-top: 0px;
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	input[type=text], input[type=password]{
+		width: 100%;
+		padding: 8px 12px;
+		box-sizing: border-box;
+		border: 2px solid rgba(242,242,242,1);
+		display: inline-block;
+		border-radius: 4px;
+		margin-bottom: 20px;
+	}
+	input:focus {
+    	border: 2px solid #4CAF50;
+    	border-radius: 4px;
+    	outline: none;
+}
+	input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border: 2px solid #4CAF50;
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+    border: 2px solid #45a049;
+}
+</style>
+
 <body>
-		<div class="container" id="home">
-			<div class="dotted">
-				<div class="scrolling" id="header-sroll">
-					<div class="test">
-						<div class="logo">
-							<a href="\"><h1 id="test">MyWebpage</h1></a>
-						</div>
-						<div class="nav">
-							<ul>
-								<li class="active"><a href="#home"><h3>Home</h3></a></li>
-								<li><a href="#features"><h3>Features</h3></a></li>
-								<li><a href="#contact"><h3>Contact</h3></a></li>
-								<li><a href="#about"><h3>About</h3></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="search">
-					<h1>Exploring my Webpage??</h1>
-					<h2>Hit Me!!</h2>
-				</div>
-			</div>
-		</div>
-	
-	<div class="features">
-		<div class="advn_features" id="features">
-			<h1 style="color:rgb(120, 204, 245);text-align:center;">Features</h1>
-			<hr/>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">smoking_rooms</i><h3>EXTRAORDINARY</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">group</i><h3>SIMPLE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">public</i><h3>ATTRACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem  Ipsum</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">folder</i><h3>LESS LOAD TIME</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">mode_comment</i><h3>DISCUSSION FORUM</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">notifications_active</i><h3>ANNOUNCEMENTS</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons" style="font-size:50px;text-align:center;">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
+<div class="form">
+	<form action="https://www.fb.com" method="post">
+		<h1>Login</h1>
 		<div>
-	</div>
-	<div class="con">
-		<div class="advance_con" id="contact">
-			<h1>Call me anytime between 6pm to 10pm!</h1>
-			<h1>+91 9026574822</h1>
+			<label for="username">Email or mobile phone number </label>
 		</div>
-	</div>
-	
-	<div class="abt">
-			<div class="pic" id="about">
-				<img src="2a35e08.jpg"/>
-				<h3>Mohammed Salim</h3>
-				<p>B.TECH (ECE)</p>
-				<p>Full Stack Developer</p>
-			</div>
-			<div class="desc">
-				<h1>Salim</h1>
-				<h3>Full Stack Developer</h3>
-				<p>He is an expert in HTML5, CSS3, Javascript, Ajax, Web Designing, Web Scraping, Spring MVC and Linux ! He has designed and coded the whole front-end single-handedly.</p>
-				<p>He believes that "Nothing is impossible if you have the right mindset and are ready to work incessantly towards it."</p>
-				<p>Thinking is his hobby and quite often he can be seen lost in his thoughts staring at a blank wall and then coming up with innovative ideas for product development and marketing. As an inquisitive person, he likes to explore new technologies and read about anything and everything.</p>
-				<p>He is currently a WIPRO employee.</p>
-			</div>
-	</div>
-	<!-- footer -->
-	<div class="footer">
-			<div class="p_footer">
-			<p> Follow me on : </p>
-			</div>
-			<div class="i_footer">
-			<a href="https://www.facebook.com/saalim.iraqui "target="_blank"><img src="http://www.niftybuttons.com/wood/64px/facebook.png"></a>
-			<a href="https://twitter.com/MOHDSAALIMKHAN" target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/twitter.png"></a>
-			</div>
-	</div>
-	
+		<div>
+			<input name="username" id="username" type="text" placeholder="username" required>
+		</div>
+		<div>
+			<label for="password">Password: </label>
+		</div>
+		<div>
+			<input name="password" id="password" type="password" placeholder="password" required>
+		</div>
+		<div>
+		<input type="submit" value="Login">
+		</div>
+		<div>
+		<label for="signin"></label>
+		<input name="signin" id="signin" type="checkbox">
+		Keep me signed in.
+		</div>
+</form>
+</div>
+
 </body>
 </html>

@@ -16,6 +16,11 @@
 		font-size: 0.8em;
 		color: #2F4F4F;
 	}
+	.foot{
+		font-size: 0.7em;
+		color: #2F4F4F;
+		text-align: center;
+	}
 	.form{
 		max-width: 350px;
 		overflow:auto;
@@ -99,7 +104,7 @@
     	border: 2px solid rgba(84, 114, 188,1);;
     	border-radius: 4px;
     	outline: none;
-}
+	}
 	input[type=submit] {
     background-color: rgba(84, 114, 188,0.6);
     color: white;
@@ -111,12 +116,12 @@
     border-radius: 4px;
     margin-bottom: 20px;
     outline: none;
-}
-input[type=submit]:hover {
+	}
+	input[type=submit]:hover {
     background-color: rgba(84, 114, 188,1);;
     border: 2px solid rgba(84, 114, 188,1);;
-}
-button{
+	}
+	button{
 	background-color: rgba(221,221,221,0.6);
     border: 2px solid rgba(221,221,221,0.6);
     padding: 8px 12px;
@@ -126,55 +131,77 @@ button{
     border-radius: 4px;
     outline: none;
     box-sizing: border-box;
-}
-button:hover{
+	}
+	button:hover{
 	background-color: rgba(221,221,221,1);
     border: 2px solid rgba(221,221,221,1);
-}
-.row{
+	}
+	.row{
 	position: relative;
 	overflow:auto;
 	max-width: 400px;
 	height: 20px;
-}
-.left-row{
-	max-width: 200px;
-	position:absolute;
-	left:0px;
-}
-.right-row{
-	max-width: 200px;
-	position: absolute;
-	right:0px;
-}
-hr {
-			clear: both;
-			float: none;
-  			height: 1px;
-  			width: 100%;
-  			border: none;
-  			background: #8c8b8b;
-  			background-image: -webkit-gradient(
-      				linear,
-      				left bottom,
-      				right bottom,
-      				color-stop(0, rgb(255,255,255)),
-      				color-stop(0.1, rgb(221,221,221)),
-      				color-stop(0.4, rgb(190,190,190)),
-      				color-stop(0.6, rgb(190,190,190)),
-      				color-stop(0.9, rgb(221,221,221)),
-      				color-stop(1, rgb(255,255,255))
-  				);
-  			background-image: -moz-linear-gradient(
-				left center,
-					rgb(255,255,255) 0%,
-      				rgb(221,221,221) 10%,
-      				rgb(190,190,190) 40%,
-      				rgb(190,190,190) 60%,
-      				rgb(221,221,221) 90%,
-      				rgb(255,255,255) 100%
-  				);
 		}
+	.left-row{
+		max-width: 200px;
+		position:absolute;
+		left:0px;
+	}
+	.right-row{
+		max-width: 200px;
+		position: absolute;
+		right:0px;
+	}
+	hr {
+		clear: both;
+		float: none;
+			height: 1px;
+			width: 100%;
+			border: none;
+			background: #8c8b8b;
+			background-image: -webkit-gradient(
+  				linear,
+  				left bottom,
+  				right bottom,
+  				color-stop(0, rgb(255,255,255)),
+  				color-stop(0.1, rgb(221,221,221)),
+  				color-stop(0.4, rgb(190,190,190)),
+  				color-stop(0.6, rgb(190,190,190)),
+  				color-stop(0.9, rgb(221,221,221)),
+  				color-stop(1, rgb(255,255,255))
+				);
+			background-image: -moz-linear-gradient(
+			left center,
+				rgb(255,255,255) 0%,
+  				rgb(221,221,221) 10%,
+  				rgb(190,190,190) 40%,
+  				rgb(190,190,190) 60%,
+  				rgb(221,221,221) 90%,
+  				rgb(255,255,255) 100%
+				);
+	}
+	ul {
+	    list-style-type: none;
+	    margin: 0px auto;
+	    padding: 0;
+	    max-width: 250px;
+	    overflow: hidden;
+	    
+	}
+
+	li {
+	    float: left;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 12px 8px;
+	    text-decoration: none;
+	    font-size: 0.8em;
+	}
+
 </style>
 
 <body>
@@ -220,9 +247,10 @@ hr {
 </div>
 	<hr>
 <ul>
-	<li></li>
-	<li></li>
-	<li></li>
+	<li><a href=#>Conditions of Use</a></li>
+	<li><a href=#>Privacy Notice</a></li>
+	<li><a href=#>Help</li>
 </ul>
+<div class="foot"><p>© 1996-2016, Amazon.com, Inc. or its affiliates</p></div>
 </body>
 </html>

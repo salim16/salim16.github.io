@@ -1,91 +1,256 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Forms</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Nav</title>
-<style>
-.fahad{
-	
-	left: -50%;
-	position: relative;
-	text-align: left;
-	background-color: #333;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-	position:relative;
-    left:90%;
-}
-
-li {
-    float: left;
-	position: relative;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 260px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    left: 0px;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-</style>
 </head>
+<style>
+	body{
+		padding: 0px;
+		margin: 0px;
+	}
+	p,h1{
+		font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+	}
+	.desc p{
+		font-size: 0.8em;
+		color: #2F4F4F;
+	}
+	.foot{
+		font-size: 0.7em;
+		color: #2F4F4F;
+		text-align: center;
+	}
+	.form{
+		max-width: 350px;
+		overflow:auto;
+		border: 2px solid rgba(242,242,242,1);
+		margin: 70px auto 25px;
+		border-radius: 4px;
+		background-color: rgba(242,242,242,0.6);
+	}
+
+	.form-bottom{
+		margin: 5px 20px;
+		position: relative;
+		overflow:auto;
+		max-width: 400px;
+		height: 20px;
+	}
+	.left-hr{
+		width: 100px;
+		position: absolute;
+		left: 0px;	
+	}
+	.desc{
+		width: 150px;
+		position: absolute;
+		left: 100px;
+	}
+	.right-hr{
+		width: 100px;
+		position: absolute;
+		right: 0px;
+	}
+	.signup{
+		margin: 0px 20px 15px;
+	}
+	form{
+		padding: 30px 20px;
+		margin: 0px;
+	}
+	h1{
+		padding: 0px;
+		margin-top: 0px;
+	}
+	p{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	a:link {
+    color: blue;
+    text-decoration: none;
+	}
+
+	a:visited {
+	    color: blue;
+	    text-decoration: none;
+	}
+
+	a:hover {
+	    color: rgba(84, 114, 188,1);
+	    text-decoration: underline;
+	}
+
+	a:active {
+	    color: rgba(84, 114, 188,1);
+	    text-decoration: underline;
+	}
+
+	input[type=text], input[type=password]{
+		width: 100%;
+		padding: 8px 12px;
+		box-sizing: border-box;
+		border: 2px solid rgba(242,242,242,1);
+		display: inline-block;
+		border-radius: 4px;
+		margin-bottom: 20px;
+	}
+	input:focus {
+    	border: 2px solid rgba(84, 114, 188,1);;
+    	border-radius: 4px;
+    	outline: none;
+	}
+	input[type=submit] {
+    background-color: rgba(84, 114, 188,0.6);
+    color: white;
+    border: 2px solid rgba(84, 114, 188,0.6);
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    outline: none;
+	}
+	input[type=submit]:hover {
+    background-color: rgba(84, 114, 188,1);;
+    border: 2px solid rgba(84, 114, 188,1);;
+	}
+	button{
+	background-color: rgba(221,221,221,0.6);
+    border: 2px solid rgba(221,221,221,0.6);
+    padding: 8px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+	}
+	button:hover{
+	background-color: rgba(221,221,221,1);
+    border: 2px solid rgba(221,221,221,1);
+	}
+	.row{
+	position: relative;
+	overflow:auto;
+	max-width: 400px;
+	height: 20px;
+		}
+	.left-row{
+		max-width: 200px;
+		position:absolute;
+		left:0px;
+	}
+	.right-row{
+		max-width: 200px;
+		position: absolute;
+		right:0px;
+	}
+	hr {
+		clear: both;
+		float: none;
+			height: 1px;
+			width: 100%;
+			border: none;
+			background: #8c8b8b;
+			background-image: -webkit-gradient(
+  				linear,
+  				left bottom,
+  				right bottom,
+  				color-stop(0, rgb(255,255,255)),
+  				color-stop(0.1, rgb(221,221,221)),
+  				color-stop(0.4, rgb(190,190,190)),
+  				color-stop(0.6, rgb(190,190,190)),
+  				color-stop(0.9, rgb(221,221,221)),
+  				color-stop(1, rgb(255,255,255))
+				);
+			background-image: -moz-linear-gradient(
+			left center,
+				rgb(255,255,255) 0%,
+  				rgb(221,221,221) 10%,
+  				rgb(190,190,190) 40%,
+  				rgb(190,190,190) 60%,
+  				rgb(221,221,221) 90%,
+  				rgb(255,255,255) 100%
+				);
+	}
+	ul {
+	    list-style-type: none;
+	    margin: 0px auto;
+	    padding: 0;
+	    max-width: 250px;
+	    overflow: hidden;
+	    
+	}
+
+	li {
+	    float: left;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 12px 8px;
+	    text-decoration: none;
+	    font-size: 0.8em;
+	}
+
+</style>
+
 <body>
-<div class="fahad">
+<div class="form">
+	<form action="https://www.fb.com" method="post">
+		<h1>Login</h1>
+		<div>
+			<label for="username"><p>Email or mobile phone number </p></label>
+		</div>
+		<div>
+			<input name="username" id="username" type="text" placeholder="username" required>
+		</div>
+		<div class="row">
+			<div class="left-row">
+				<label for="password"><p>Password:</p></label>
+			</div>
+			<div class="right-row">
+				<p><a href=#>Forgot Password?</a></p>
+			</div>
+		</div>
+		<div>
+			<input name="password" id="password" type="password" placeholder="password" required>
+		</div>
+		<div>
+		<input type="submit" value="Login">
+		</div>
+		<div>
+		<label for="signin"></label>
+		<input name="signin" id="signin" type="checkbox">
+		Keep me signed in.
+		</div>
+</form>
 
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
-</ul>
+	<div class="form-bottom">
+		<div class="left-hr"><hr></div>
+		<div class="desc"><p>New to Tinglado?</p></div>
+		<div class="right-hr"><hr></div> 
+	</div>
+
+	<div class="signup"> 
+		<button>Create your Tinglado account</button>
+	</div>
 </div>
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
-
+	<hr>
+<ul>
+	<li><a href=#>Conditions of Use</a></li>
+	<li><a href=#>Privacy Notice</a></li>
+	<li><a href=#>Help</a></li>
+</ul>
+<div class="foot"><p>© 1996-2016, xyz.com, Inc. or its affiliates</p></div>
 </body>
 </html>

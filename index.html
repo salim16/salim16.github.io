@@ -25,7 +25,7 @@
 		max-width: 350px;
 		overflow:auto;
 		border: 2px solid rgba(242,242,242,1);
-		margin: 70px auto 25px;
+		margin: 0px auto 25px;
 		border-radius: 4px;
 		background-color: rgba(242,242,242,0.6);
 	}
@@ -201,10 +201,33 @@
 	    text-decoration: none;
 	    font-size: 0.8em;
 	}
+	.parrot{
+		 height: 20px;
+		 margin: 0px;
+		 padding: 0px;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    /* background: radial-gradient( rgba(221,221,221,0.4) 30%,rgba(255,255,255,0.8) 0%, rgb(255,255,255) 50%); */  /* Standard syntax (must be last) */
+	background: radial-gradient(rgba(255,255,255,0.8) 5%, rgba(221,221,221,0.4) 15%, rgba(255,255,255,0.9) 60%);
+	}
+	.logo{
+		max-width: 100%;
+		text-align: center;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		width: auto\9; /* ie8 */
+	}
 
 </style>
 
 <body>
+<div class="logo">
+	 <img src="Capture.PNG" />
+</div>
 <div class="form">
 	<form action="https://www.fb.com" method="post">
 		<h1>Login</h1>
@@ -245,7 +268,7 @@
 		<button>Create your Tinglado account</button>
 	</div>
 </div>
-	<hr>
+	<hr class="parrot">
 <ul>
 	<li><a href=#>Conditions of Use</a></li>
 	<li><a href=#>Privacy Notice</a></li>

@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -284,23 +285,28 @@
 			overflow: auto;
 		}
 		div.advn_features{
+			  display: -webkit-flex;
+    			display: flex;
+			-webkit-align-items: center;
+    			align-items: center;
+    			-webkit-flex-wrap: wrap;
+    			flex-wrap: wrap;
 			max-width: 100%;
 			overflow: auto;	
 		}
 			* {
 				box-sizing: border-box;
 			}
-
 			.floating-box {
 				padding: 0 15px;
-				float: left;
-				width: 24.99999%;
+				width: 300px;
 				overflow: hidden;
 				height: 250px;
 				text-align: center;
-				margin-top: 25px;
+				margin: auto;
 			}
 
+			
 			@media only screen and (max-width: 700px){
 				.floating-box {
 					width: 49.99999%;
@@ -319,6 +325,9 @@
 				display: table;
 				clear: both;
 			}
+
+			
+			
 		div.abt{
 			max-width:100%;
 			overflow:auto;
@@ -407,9 +416,11 @@
 		</div>
 	
 	<div class="features">
-		<div class="advn_features" id="features">
 			<h1 style="color:rgb(120, 204, 245);text-align:center;">Features</h1>
 			<hr/>
+		<div class="advn_features" id="features">
+			
+			
 			<div class="floating-box"><i class="material-icons">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
 			<div class="floating-box"><i class="material-icons">smoking_rooms</i><h3>EXTRAORDINARY</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
 			<div class="floating-box"><i class="material-icons">group</i><h3>SIMPLE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
@@ -418,7 +429,7 @@
 			<div class="floating-box"><i class="material-icons">mode_comment</i><h3>DISCUSSION FORUM</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
 			<div class="floating-box"><i class="material-icons">notifications_active</i><h3>ANNOUNCEMENTS</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
 			<div class="floating-box"><i class="material-icons">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="clearfix"></div>
+			
 		</div>
 	</div>
 	

@@ -301,30 +301,16 @@
 				text-align: center;
 				
 			}
-
 			
-			
-
-			
-			
-		div.abt{
-			max-width:100%;
-			overflow:auto;
-			background-color: rgb(255,255,255);
-		}
 		div.pic{
-				display: inline-block;
-    			max-width: 350px;
-    			height: 600px;
-    			overflow: hidden;	
-				margin-right:80px;
+			text-align:center;
 		}
+			
 		div.pic img{
 			max-width: 100%;
 			height: auto;
 			border-radius:50%;
 			padding: 80px 2px;
-			
 		}
 		div.pic h4{
 			text-align:center;
@@ -332,13 +318,7 @@
 			margin:0;
 			padding:0;
 		}
-		div.desc{
-			display: inline-block;
-    			max-width: 900px;
-    			height: 600px;
-    			overflow: hidden;	
-				
-		}
+	
 		div.desc h1{
 			color: 	rgb(0,0,0);
 			text-align: left;
@@ -367,6 +347,44 @@
 			line-height:25px;
 			padding:0px 10px 5px;
 		}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+
+@media only screen and (min-width: 500px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
 	</style>
 </head>
 <body>
@@ -419,14 +437,14 @@
 		</div>
 	</div>
 	
-	<div class="abt">
-			<div class="pic" id="about">
+	<div class="row">
+			<div class="col-3 pic" id="about">
 				<img src="2a35e08.jpg"/>
 				<h3>Mohammed Salim</h3>
 				<p>B.TECH (ECE)</p>
 				<p>Full Stack Developer</p>
 			</div>
-			<div class="desc">
+			<div class="col-9 desc">
 				<h1>Salim</h1>
 				<h3>Full Stack Developer</h3>
 				<p>He is an expert in HTML5, CSS3, Javascript, Ajax, Web Designing, Web Scraping, Spring MVC and Linux ! He has designed and coded the whole front-end single-handedly.</p>

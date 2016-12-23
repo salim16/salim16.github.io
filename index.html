@@ -226,13 +226,10 @@
 		}
 		
 		
-		#features, #contact, #about, #home{
-			padding-top:55px;
-			margin-top:-55px;
-		}
+		
 		div.con{
 			max-width: 100%;
-			min-height: 345px;
+			min-height: 400px;
 			overflow: auto;
 			background-image: url("Nature-High-Definition-Wallpaper.jpg");
 			background-repeat: no-repeat;
@@ -241,7 +238,7 @@
 		}
 		div.advance_con{
 			max-width:100%;
-			min-height:345px;
+			min-height: 400px;
 			overflow:auto;
 			background-color:rgba(0,0,0,0.8);
 		}
@@ -250,36 +247,29 @@
 			margin:20px;
 		}
 		div.footer{
-			max-width:100%;
-			min-height: 60px;
-			overflow:auto;
 			background-color:rgb(0,0,0);
-			position:relative;
+			margin: 0px;
+			padding: 0px;
 		}
 		div.p_footer{
-			position:absolute;
-			max-width:10%;
-			height:10 px;
-			display:inline-block;
-			left:38%;	
+				
+			margin: 0px;
+			padding: 0px;
 		}
 		div.p_footer p{
+			text-align: right;
 			font-size: 1.2em;
 			color:white;	
-			text-align:right;
 		}
 		div.i_footer{
-			position:absolute;
-			width:10%;
-			height:10 px;
-			display:inline-block;
-			left:50%;
-			top:10px;
+			text-align: left;
+			
+			margin: 0px;
+			padding: 13.5px;
 		}
 		div.i_footer img{
 			height:auto;
 			max-width:30px;
-			margin: 3px;
 		}
 		div.features{
 			background-color: rgba(128,128,128,0.1);
@@ -314,7 +304,7 @@
 			max-width: 100%;
 			height: auto;
 			border-radius:50%;
-			padding: 80px 2px;
+			padding: 40px;
 		}
 		div.pic h4{
 			text-align:center;
@@ -355,8 +345,17 @@
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
+	div.p_footer p{
+			text-align: center;
+			font-size: 1.2em;
+			color:white;	
+		}
+		div.i_footer{
+			text-align: center;
+			margin: 0px;
+			padding: 13.5px;
+		}
 }
-
 
 @media only screen and (min-width: 500px) {
     /* For desktop: */
@@ -373,10 +372,10 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
-
 * {
     box-sizing: border-box;
 }
+
 .row::after {
     content: "";
     clear: both;
@@ -384,8 +383,10 @@
 }
 [class*="col-"] {
     float: left;
-    padding: 15px;
 }
+
+
+
 html {
     font-family: "Lucida Sans", sans-serif;
 }
@@ -416,12 +417,10 @@ html {
 			</div>
 		</div>
 	
-	<div class="features">
+	<div class="features" id="features">
 			<h1 style="color:rgb(120, 204, 245);text-align:center;">Features</h1>
 			<hr/>
-		<div class="advn_features" id="features">
-			
-			
+		<div class="advn_features">
 			<div class="floating-box"><i class="material-icons">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
 			<div class="floating-box"><i class="material-icons">smoking_rooms</i><h3>EXTRAORDINARY</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
 			<div class="floating-box"><i class="material-icons">group</i><h3>SIMPLE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
@@ -441,8 +440,8 @@ html {
 		</div>
 	</div>
 	
-	<div class="row">
-			<div class="col-3 pic" id="about">
+	<div class="row" id="about">
+			<div class="col-3 pic">
 				<img src="2a35e08.jpg"/>
 				<h3>Mohammed Salim</h3>
 				<p>B.TECH (ECE)</p>
@@ -455,14 +454,20 @@ html {
 				<p>He believes that "Nothing is impossible if you have the right mindset and are ready to work incessantly towards it."</p>
 				<p>Thinking is his hobby and quite often he can be seen lost in his thoughts staring at a blank wall and then coming up with innovative ideas for product development and marketing. As an inquisitive person, he likes to explore new technologies and read about anything and everything.</p>
 				<p>He is currently a WIPRO employee.</p>
+				<p>He is an expert in HTML5, CSS3, Javascript, Ajax, Web Designing, Web Scraping, Spring MVC and Linux ! He has designed and coded the whole front-end single-handedly.</p>
+				<p>He believes that "Nothing is impossible if you have the right mindset and are ready to work incessantly towards it."</p>
+				<p>Thinking is his hobby and quite often he can be seen lost in his thoughts staring at a blank wall and then coming up with innovative ideas for product development and marketing. As an inquisitive person, he likes to explore new technologies and read about anything and everything.</p>
+				<p>He is currently a WIPRO employee.</p>
 			</div>
 	</div>
+
+
 	<!-- footer -->
-	<div class="footer">
-			<div class="p_footer">
+	<div class="row footer">
+			<div class="p_footer col-6">
 			<p> Follow me on : </p>
 			</div>
-			<div class="i_footer">
+			<div class="i_footer col-6">
 			<a href="https://www.facebook.com/saalim.iraqui "target="_blank"><img src="http://www.niftybuttons.com/wood/64px/facebook.png"></a>
 			<a href="https://twitter.com/MOHDSAALIMKHAN" target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/twitter.png"></a>
 			</div>

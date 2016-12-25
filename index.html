@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,23 +81,14 @@
 			color: 	rgb(255,255,255);
 		}
 		h2{
-			color: rgb(255,255,255);
+		
 			font-size: 2.0em;
-			text-align:center;
-			background-color: rgb(120, 204, 245);
-			border: 2px solid rgb(255,255,255);
-			border-radius: 25px;
-			
 		}
 		#header-sroll.bgg{
 			background-color: rgb(0,0,0);
 			height:55px;
 		}
-		h2:hover{
-			background-color: rgba(120, 204, 245,0.8);
-			border: 2px solid rgb(255,255,255);
-			color: rgb(255,255,255);
-		}
+		
 		h3{
 			font-size: 1.2em;
 			text-align: center;
@@ -157,11 +149,32 @@
 		}
 		
 		div.search{
-			margin: 220px 27%;
-			max-width: 45%;
-			
+			margin: 220px auto;
+			text-align: center;
 		}
 		
+		.button {
+		    background-color: rgb(120, 204, 245);
+		    border: 2px solid rgb(255,255,255);
+		    border-radius: 25px;
+		    color: rgb(255,255,255);
+		    padding: 8px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 2em;
+		    margin: 4px 2px;
+		    width: 50%;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.5s;
+		    cursor: pointer;	
+		}
+
+		.button:hover {
+		    background-color: rgba(120, 204, 245,0.8);
+			border: 2px solid rgb(255,255,255);
+			color: rgb(255,255,255);
+		}
 		hr {
 			clear: both;
 			float: none;
@@ -224,7 +237,6 @@
 		li a:hover {
 			border-bottom:3px solid rgb(120, 204, 245);
 		}
-		
 		
 		
 		div.con{
@@ -409,9 +421,9 @@ html {
 						</div>
 					</div>
 				</div>
-				<div class="search">
-					<h1>Exploring my Webpage??</h1>
-					<h2>Hit Me!!</h2>
+				<div class="search col-12">
+					<h1>Exploring my Webpage?</h1>
+					<button class="button">Hit Me!!</button>
 				</div>
 			</div>
 		</div>

@@ -1,483 +1,189 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Div and background</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<!-- <script src="scroll.js"></script> -->
-	
-	<script>
-		$(window).scroll(function () {
-     			var sc = $(window).scrollTop()
-    			if (sc > 120) {
-        			$("#header-sroll").addClass("bgg");
-				$(".logo").stop().animate({"top":"0px"},"fast");
-				$(".nav").stop().animate({"top":"0px"},"fast");
-				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
-				
-    			} else {
-				$("#header-sroll").removeClass("bgg");
-				$(".logo").stop().animate({"top":"15px"},"fast");
-				$(".nav").stop().animate({"top":"10px"},"fast");
-				$("#home").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#features").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#about").css({"padding-top":"55px","margin-top":"-55px"});
-				$("#contact").css({"padding-top":"55px","margin-top":"-55px"});
-			 }
-		
-		});
-	</script>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'> 
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
-	
-	<script>
-		$(document).ready(function(){
-  			$("a").on('click', function(event) {
-    				if (this.hash !== "") {
-      				event.preventDefault();
-      				var hash = this.hash;
-      			$('html, body').animate({
-        			scrollTop: $(hash).offset().top
-      			}, 900, function(){
-        			window.location.hash = hash;
-      			});
-    		} 
-  		});
-	});
-	</script>
-	<script>
-			$(function(){
-				$('ul li a').on('click', function(){
-					$(this).parent().addClass('active').siblings().removeClass('active');
-				});
-			});
-	</script>
-	<style>
-		body {
-    			font-size: 100%;
-    			margin: 0;
-    			padding: 0px;
-		}
-		h1{
-			color: 	rgb(255,255,255);
-			font-size: 2.5em;
-			text-align:center;
-		}
-		div.logo h1{
-			font-family: "Brush Script MT", cursive;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 500;
-			line-height:0px;
-			font-size: 2.4em;
-			color: rgb(120, 204, 245);
-		}
-		#test:hover{
-			color: 	rgb(255,255,255);
-		}
-		h2{
-		
-			font-size: 2.0em;
-		}
-		#header-sroll.bgg{
-			background-color: rgb(0,0,0);
-			height:55px;
-		}
-		
-		h3{
-			font-size: 1.2em;
-			text-align: center;
-			margin: 0px;	
-		}
-		p{
-			text-align: center;
-		}
-		a{
-			text-decoration: none;
-		}
-		div.container
-		{
-			max-width: 100%;
-			min-height: 650px;
-			background-image: url("Blur-Pictures.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			overflow: auto;
-			background-attachment: fixed;
-		}
-		div.scrolling{
-			width: 100%;
-			height: 90px;
-			position: fixed;
-			overflow: hidden;	
-		}
-		div.scrolling:hover {
-			background-color: rgba(0,0,0,0.2); 	
-		}
-		div.test{
-			max-width:100%;
-			height:90px;
-			position:relative;
-			overflow:hidden;
-			
-		}
-		div.dotted {
-			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.8), rgba(0,0,0,.8) 1px, transparent 1px, transparent 50%);
-  			-webkit-background-size: 3px 3px;
-  			-moz-background-size: 3px 3px;
-  			background-size: 3px 3px;
-			overflow: auto;
-			min-height: 650px;
-			max-width: 100%;
-		}
-		div.logo{
-			position: absolute;
-			left: 7%;
-			max-width: 12%;
-			height:50px;
-			display:inline-block;
-			top:15px;	
-		}
-		
-		div.search{
-			margin: 220px auto;
-			text-align: center;
-		}
-		
-		.button {
-		    background-color: rgb(120, 204, 245);
-		    border: 2px solid rgb(255,255,255);
-		    border-radius: 25px;
-		    color: rgb(255,255,255);
-		    padding: 4px 32px;
-		    text-align: center;
-		    text-decoration: none;
-		    display: inline-block;
-		    font-size: 2em;
-		    margin: 4px 2px;
-		    width: 50%;
-		    -webkit-transition-duration: 0.4s; /* Safari */
-		    transition-duration: 0.5s;
-		    cursor: pointer;	
-		}
+  
+  <style type="text/css">
 
-		.button:hover {
-		    background-color: rgba(120, 204, 245,0.8);
-			border: 2px solid rgb(255,255,255);
-			color: rgb(255,255,255);
-		}
-		hr {
-			clear: both;
-			float: none;
-  			height: 1px;
-  			width: 40%;
-  			border: none;
-  			background: #8c8b8b;
-  			background-image: -webkit-gradient(
-      				linear,
-      				left bottom,
-      				right bottom,
-      				color-stop(0, rgb(255,255,255)),
-      				color-stop(0.1, rgb(221,221,221)),
-      				color-stop(0.4, rgb(190,190,190)),
-      				color-stop(0.6, rgb(190,190,190)),
-      				color-stop(0.9, rgb(221,221,221)),
-      				color-stop(1, rgb(255,255,255))
-  				);
-  			background-image: -moz-linear-gradient(
-				left center,
-      				rgb(255,255,255) 0%,
-      				rgb(221,221,221) 10%,
-      				rgb(190,190,190) 40%,
-      				rgb(190,190,190) 60%,
-      				rgb(221,221,221) 90%,
-      				rgb(255,255,255) 100%
-  				);
-		}
-		.floating-box i{
-			color: rgb(120, 204, 245);
-			font-size: 50px;
-		}
-		.nav{
-			max-width: 50%;
-			display:inline-block;
-			left: 60%;
-			position:absolute;
-			top:10px;
-			white-space: nowrap;
-		}
-		ul{
-			list-style-type: none;
-    			margin: 0;
-    			padding: 0;
-    			overflow: hidden;
-		}
-		li {
-    			float:left;
-		}
-		li a {
-   			display: block;
-    			color: rgb(255,255,255);
-    			text-align: center;
-    			padding: 14px 26px;
-    			text-decoration: none;	
-		}
-		li.active a{
-			border-bottom:3px solid rgb(120, 204, 245);
-		}
-		li a:hover {
-			border-bottom:3px solid rgb(120, 204, 245);
-		}
-		
-		
-		div.con{
-			min-height: 400px;
-			background-image: url("Nature-High-Definition-Wallpaper.jpg");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
-		div.advance_con{
-			min-height: 400px;
-			background-color:rgba(0,0,0,0.8);
-		}
-		div.advance_con h1{
-			padding-bottom:60px;
-			padding-top: 40px;
-		}
-		
-		div.features{
-			background-color: rgba(128,128,128,0.1);
-			max-width: 100%;
-			overflow: auto;
-		}
-		div.advn_features{
-			display: -webkit-flex;
-    			display: flex;
-			-webkit-justify-content: center;
-    			justify-content: center;
-    			-webkit-flex-wrap: wrap;
-    			flex-wrap: wrap;
-			max-width: 100%;
-			overflow: auto;	
-		}
-			
-			.floating-box {
-				padding: 20px;
-				width: 400px;
-				overflow: hidden;
-				height: 250px;
-				text-align: center;
-				
-			}
-			
-		div.pic{
-			text-align:center;
-		}
-			
-		div.pic img{
-			max-width: 100%;
-			height: auto;
-			border-radius:50%;
-			padding: 40px;
-		}
-		div.pic h4{
-			text-align:center;
-			font-size:1.4em;
-			margin:0;
-			padding:0;
-		}
-	
-		div.desc h1{
-			color: 	rgb(0,0,0);
-			text-align: left;
-			margin: 0px;
-			padding:20px 10px 0px;
-			
-		}
-		div.desc h2{
-			color: rgb(0,0,0);
-			text-align:left;
-			background-color: rgb(255,255,255);
-			border: none;
-			border-radius: 0px;
-			padding:10px;
-			
-		}
-		
-		div.desc h3{
-			text-align: left;
-			line-height:50px;
-			padding:0px 10px 0px;
-		}
-		
-		div.desc p{
-			text-align: justify;
-			line-height:25px;
-			padding:0px 10px 5px;
-		}
-
-		div.footer{
-			background-color:rgb(0,0,0);
-			margin: 0px;
-			padding: 0px;
-		}
-		div.p_footer{	
-			margin: 0px;
-			padding: 0px;
-		}
-		
-		div.i_footer img{
-			height:auto;
-			max-width:30px;
-		}
-		.p_footer p{
-			text-align: center;
-			font-size: 1.2em;
-			color: white;	
-		}
-		.i_footer{
-			text-align: center;
-			margin: 0px;
-			padding: 13.5px;
-		}
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-	float: left;
-}
-
-@media only screen and (min-width: 500px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-	.p_footer p{
-			text-align: right;
-			font-size: 1.2em;
-			color: white;	
-		}
-		.i_footer{
-			text-align: left;
-			margin: 0px;
-			padding: 13.5px;
-		}
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+  body{
+  /*min-height: 1000px;*/
+  background-color: #f5f8fa;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  color: #666666;
+  font-size: 14px;
+  position: relative;
 }
 
 
-html {
-    font-family: "Lucida Sans", sans-serif;
+.navbar{
+  margin-bottom: 0px;
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-	</style>
+
+@media (min-width: 768px) 
+.navbar {
+  border-radius: 0px;
+}
+
+.navbar .navbar-nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+  border-bottom: 2px solid transparent;
+}
+.navbar:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+.navbar.affixed,
+.navbar.affixed:hover{
+  background-color: #222;
+  padding:0px;
+}
+.navbar .navbar-brand {
+  color: #fff;
+  font-family: 'Kaushan Script',cursive;
+  letter-spacing: 1px;
+  font-size: 36px;
+}
+
+.has_transition{
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.navbar-default {
+  background: none;
+  border: none;
+}
+
+.navbar-default .navbar-brand {
+  color: #00A1F1;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 2px solid #00A1F1;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: none;
+  border-bottom: 2px solid #00A1F1;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #000;
+}
+
+  .bg_first{
+  min-height: 650px;
+  padding-top: 30px;
+  background: url('Blur-Pictures.jpg') no-repeat center center;
+  background-position: center center;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  }
+  </style>
+
+
+
+
+<script type="text/javascript">
+$(window).scroll(function(){
+  if ($(this).scrollTop() > 150) {
+    $('.navbar').addClass("affixed");
+  } else {
+    $('.navbar').removeClass("affixed");
+  }
+});
+</script>
+
+
+
+
 </head>
-<body>
-		<div class="container" id="home">
-			<div class="dotted">
-				<div class="scrolling" id="header-sroll">
-					<div class="test">
-						<div class="logo">
-							<a href="\"><h1 id="test">MyWebpage</h1></a>
-						</div>
-						<div class="nav">
-							<ul>
-								<li class="active"><a href="#home"><h3>Home</h3></a></li>
-								<li><a href="#features"><h3>Features</h3></a></li>
-								<li><a href="#contact"><h3>Contact</h3></a></li>
-								<li><a href="#about"><h3>About</h3></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="search col-12">
-					<h1>Exploring my Webpage?</h1>
-					<button class="button">Hit Me!!</button>
-				</div>
-			</div>
-		</div>
-	
-	<div class="features">
-			<h1 style="color:rgb(120, 204, 245);text-align:center;">Features</h1>
-			<hr/>
-		<div class="advn_features" id="features">
-			<div class="floating-box"><i class="material-icons">computer</i><h3>INTERACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum !</p></div>
-			<div class="floating-box"><i class="material-icons">smoking_rooms</i><h3>EXTRAORDINARY</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
-			<div class="floating-box"><i class="material-icons">group</i><h3>SIMPLE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons">public</i><h3>ATTRACTIVE</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem  Ipsum</p></div>
-			<div class="floating-box"><i class="material-icons">folder</i><h3>LESS LOAD TIME</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons">mode_comment</i><h3>DISCUSSION FORUM</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum.</p></div>
-			<div class="floating-box"><i class="material-icons">notifications_active</i><h3>ANNOUNCEMENTS</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			<div class="floating-box"><i class="material-icons">zoom_out_map</i><h3>RESPONSIVE DESIGN</h3><p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum!</p></div>
-			
-		</div>
-	</div>
-	
-	<div class="con col-12" id="contact">
-		<div class="advance_con col-12">
-			<h1>Call me anytime between 6pm to 10pm!</h1>
-			<h1>+91 9026574822</h1>
-		</div>
-	</div>
-	
-	<div class="row">
-			<div class="col-3 pic" id="about">
-				<img src="2a35e08.jpg"/>
-				<h3>Mohammed Salim</h3>
-				<p>B.TECH (ECE)</p>
-				<p>Full Stack Developer</p>
-			</div>
-			<div class="col-9 desc">
-				<h1>Salim</h1>
-				<h3>Full Stack Developer</h3>
-				<p>He is an expert in HTML5, CSS3, Javascript, Ajax, Web Designing, Web Scraping, Spring MVC and Linux ! He has designed and coded the whole front-end single-handedly.</p>
-				<p>He believes that "Nothing is impossible if you have the right mindset and are ready to work incessantly towards it."</p>
-				<p>Thinking is his hobby and quite often he can be seen lost in his thoughts staring at a blank wall and then coming up with innovative ideas for product development and marketing. As an inquisitive person, he likes to explore new technologies and read about anything and everything.</p>
-				<p>He is currently a WIPRO employee.</p>
-				<p>He is an expert in HTML5, CSS3, Javascript, Ajax, Web Designing, Web Scraping, Spring MVC and Linux ! He has designed and coded the whole front-end single-handedly.</p>
-				<p>He believes that "Nothing is impossible if you have the right mindset and are ready to work incessantly towards it."</p>
-				<p>Thinking is his hobby and quite often he can be seen lost in his thoughts staring at a blank wall and then coming up with innovative ideas for product development and marketing. As an inquisitive person, he likes to explore new technologies and read about anything and everything.</p>
-				<p>He is currently a WIPRO employee.</p>
-			</div>
-	</div>
+<body data-spy="scroll" data-target="#myNavbar">
 
+<nav class="navbar navbar-default navbar-fixed-top has_transition">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand has_transition" href="#">Tinglado</a>
+    </div>
+    <div id="myNavbar" class="clearfix collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class=""><a href="#">HOME</a></li>
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="#">PRICING</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">TEAM</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-	<!-- footer -->
-	<div class="row footer">
-			<div class="p_footer col-6">
-			<p> Follow me on : </p>
-			</div>
-			<div class="i_footer col-6">
-			<a href="https://www.facebook.com/saalim.iraqui "target="_blank"><img src="http://www.niftybuttons.com/wood/64px/facebook.png"></a>
-			<a href="https://twitter.com/MOHDSAALIMKHAN" target="_blank" align="left"><img src="http://www.niftybuttons.com/wood/64px/twitter.png"></a>
-			</div>
-	</div>
+<div class="bg_first" id="home">
+        
+</div>
+
+<div class="container">
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+<h1>This is a test</h1>
+</div>
 </body>
 </html>

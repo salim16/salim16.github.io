@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,11 +111,23 @@
   background-color: #000;
 }
 
+@media (max-width: 768px){
+    .navbar-nav {
+      /*background: rgba(0,0,0,0.9);*/
+      margin: 0px ;
+    }
+    .navbar-default .navbar-collapse{
+      border:none;
+      background: #222;
+      padding: 0;
+    }
+  }
+
 
 
   .bg_first{
   min-height: 650px;
-  background: url('Blur-Pictures.jpg') no-repeat center center;
+  background: url('b8rkmfxzjdu-jordan-whitt.jpg') no-repeat center center;
   background-position: center center;
   width: 100%;
   -webkit-background-size: 100%;
@@ -266,7 +276,7 @@ p,li,ol,ul{
   min-height:400px;
 }
 .pricing_row .pricing_title{
-	font-size: 45px;
+  font-size: 45px;
   color: white;
   text-align: center;
   font-weight: 300;
@@ -277,11 +287,81 @@ p,li,ol,ul{
 }
 
 .pricing_shadow{
-	background: rgba(0,0,0,0.7);
-	min-height:400px;
-	padding-top: 20px;
-  	padding-bottom: 20px;
-	z-index: 1;
+  background: rgba(0,0,0,0.8);
+  min-height:400px;
+  padding-top: 20px;
+    padding-bottom: 20px;
+  z-index: 1;
+}
+
+.margin_t_50{
+  margin-top: 50px;
+}
+
+.flat_form .form-control{
+  border-radius: 1px;
+  -webkit-box-shadow: none ;
+   box-shadow: none ; 
+  -webkit-transition: none ;
+}
+
+.form-loader{
+  position: absolute;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 40px;
+  z-index: 1001;
+}
+.form-loader  .fa{
+  font-size: 42px;
+}
+.form-loader p{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 22px;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  -moz-transform: translate3d(-50%,-50%,0);
+  -o-transform: translate3d(-50%,-50%,0);
+  -ms-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+
+.contact_form_submit_btn{
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #00A1F1;
+  border-color: #00A1F1;
+}
+.btn-info:focus,
+.btn-info.focus {
+  color: #fff;
+  background-color: #8B9DC3;
+  border-color: #8B9DC3;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: #8B9DC3;
+  border-color: #8B9DC3;
+}
+
+.help-text{
+  color : #CE0E0A ;
+}
+
+.contact_success_msg{
+  text-align: center;
+  line-height: 1.5;
+  color: #66C566;
 }
 
   </style>
@@ -326,6 +406,62 @@ $(document).on('click', '.scroll_btn', function(event){
   var target = $($(this).attr('data-href'));
   animateScroll($('html, body'),target,-50,false);
 });
+
+
+$(document).on('submit','.ajax_form',function(event){
+  event.preventDefault();
+  var current_form = $(this);
+  current_form.find('.help-text').text("");
+  current_form.find('.form-group').removeClass("has-error");
+  var dataString = current_form.serialize();
+  var form_url = current_form.attr("action");
+  console.log("form submitted to : " +form_url);
+  console.log("with data: "+dataString);
+
+  $.ajax({
+    url : form_url,
+    data: dataString,
+    type: 'post',
+    beforeSend: function(){
+        // show the loader 
+        current_form.closest("div").find(".form_success_box").addClass("hidden");
+        current_form.closest("div").find(".form_error_box").addClass("hidden");
+        current_form.find(".form-loader").removeClass("hidden");
+    },
+    complete: function(){
+        // hide the loader
+        current_form.find(".form-loader").addClass("hidden");
+        
+    },
+    success: function(return_data){
+        console.log( return_data);
+        var resp_obj = $.parseJSON(return_data);
+        // console.log(resp_obj);
+        if (resp_obj.hasOwnProperty("success")){
+          current_form.replaceWith("<h2 class='contact_success_msg'> Thank You for Contacting Us ! <br/> We will get in touch with you very soon. </h2>");
+        }
+        else if (resp_obj.hasOwnProperty("errors")){
+          // console.log("form_level error");
+          $.each( resp_obj.errors, function( key, value ) {
+            // console.log(key);
+            // console.log(key=="__all__");
+            // console.log(resp_obj[key]);
+              if (key=="__all__"  ){
+                  console.log("form_level error");
+                  console.log(current_form.closest("div"));
+                  current_form.closest("div").find(".form_error_box").removeClass("hidden");
+                  current_form.closest("div").find(".form_error_box > .alert").text(value);
+              }
+              var cur_input = current_form.find(".form-control[name*='"+key+"']");
+              cur_input.siblings('.help-text').text(value);
+              cur_input.closest('.form-group').addClass("has-error");     
+          });
+        }
+      }
+  });
+
+});
+
 
 </script>
 
@@ -486,44 +622,66 @@ $(document).on('click', '.scroll_btn', function(event){
 </div>
 
 <div class="pricing_row" id="pricing">
-	<div class="pricing_shadow">
-	<div class="container">
-		<div class="row   ">
-			<h2 class="pricing_title text-center"> Please reach us anytime after 6 PM ! </h2> 
-			
-			<div class="clearfix"></div>
-			<div class="plan-table-container  clearfix">
-				
-				
-			</div>
+  <div class="pricing_shadow">
+  <div class="container">
+    <div class="row   ">
+      <h2 class="pricing_title text-center"> Please reach us anytime after 6 PM ! </h2> 
+      
+      <div class="clearfix"></div>
+      <div class="plan-table-container  clearfix">
+        
+        
+      </div>
 
-			<h2 class="pricing_title text-center">  +91 9026574822/ +91 7376899304</h2>
-		</div>
-	</div>
-	</div>
+      <h2 class="pricing_title text-center">  +91 9026574822/ +91 7376899304</h2>
+    </div>
+  </div>
+  </div>
 </div>
 
-<div class="container" id="contact">
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-	<h1>Test</h1>
-</div>
+<div class="bg_gray position_relative" id="contact">
+      <div class="container">
+        <div class="row padding_10">
+          <h2 class="header_title text-center"> Contact us ! </h2>
+          <hr class="stylish"/>
+
+          <div class="margin_t_50">
+              <form class="flat_form ajax_form" action="">
+                <div class="form-loader hidden">
+                  <p><i class="fa fa-pulse fa-spinner "></i><br/>
+                    <span class="font-16">Please Wait ...</span></p>
+                </div>
+                <input type='hidden' name='csrfmiddlewaretoken' value='IsAbKYWvDBpvkeKwjibiX4BU5qI2syCX' />
+                <div class="form-group col-sm-6">
+                  <input type="text" class="input-lg form-control" name="name" placeholder="First Name" />
+                  <div class="help-text"></div>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="input-lg form-control" name="name" placeholder="Last Name" />
+                  <div class="help-text"></div>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="email" class="input-lg form-control" name="email_id" placeholder="Email Id" />
+                  <div class="help-text"></div>
+                </div>
+                <div class="form-group col-sm-6">
+                  <input type="text" class="input-lg form-control" name="contact_no" placeholder="Phone Number" />
+                  <div class="help-text"></div>
+                </div>
+                <div class="form-group col-sm-12">
+                  <textarea  class="input-lg form-control" rows="4" name="message" placeholder="Message"></textarea>
+                  <div class="help-text"></div>
+                </div>
+                <div class="form-group col-sm-12">
+              <button class="btn btn-lg btn-info btn-block text-bold contact_form_submit_btn"> SEND </button>
+            </div>
+              </form>
+            </div>
+      </div>
+  </div> 
+</div>  
+
+
+
 </body>
 </html>

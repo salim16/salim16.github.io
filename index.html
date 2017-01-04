@@ -402,17 +402,99 @@ p,li,ol,ul{
   background: #f8f8f8;
 }
 
+.team_member_card a{
+  color: #00A1F1;
+}
+
+.team_member_card a:hover{
+  color: #8B9DC3;
+}
 .icon-space{
   margin: 8px;
   font-size: 22px;
 }
 
+.margin_r_5{
+  margin-right: 5px !important;
+}
+
+.footer {
+  color: #ddd;
+  padding: 30px 0 40px 0;
+  background-color: #222;
+}
+.footer h6 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 10px 0 20px 0;
+}
+.footer p {
+  margin: 0;
+}
+
+.footer ul, .footer ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.footer .social-icons-block ul li {
+    margin-right: 10px;
+}
+.footer .social-icons-block ul li:last-child {
+    margin-right: 0;
+}
+.footer .social-icons-block ul li a {
+    width: 50px;
+    text-align: center;
+    display: block;
+    background-color: #3B5997;
+    margin-bottom: 10px;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+.footer .social-icons-block ul li a:hover {
+    background-color: #567284;
+}
+.footer .social-icons-block ul li a span {
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+}
+.footer a{
+  color: #31708f;
+  font-weight: bold;
+} 
+
+.map_holder{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  min-height: 250px;
+}
   </style>
 
 
 
 
 <script type="text/javascript">
+
+function myMap() {
+  var myCenter = new google.maps.LatLng(28.5518711,77.3454971);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 15};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+
+
+
+
 $(window).scroll(function(){
   if ($(this).scrollTop() > 150) {
     $('.navbar').addClass("affixed");
@@ -773,5 +855,42 @@ $(document).on('submit','.ajax_form',function(event){
     </div>
   </div>
 </div>
+
+<div class="footer" id="aboutus">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 footer-block">
+          <div class="map_holder" id="map"></div>
+        </div>
+       
+
+        <div class="col-xs-12 col-sm-8 footer-block social-icons-block">
+          <h6>About Us</h6>
+          <p>
+           Our Webpage is the beginning of learning and introduction to Bootstarp, there is still a lot to come. Keep Calm and watch. 
+          </p>
+          <h6>Our Social Pages</h6>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" title="Facebook Page" rel="" target="_blank"><span class="fa fa-facebook"></span></a>
+              </li>
+            </ul>
+
+           
+            <p>
+            <a href="" class="margin_r_5"> Cookie Policy</a>
+            <a href="" class="margin_r_5"> Privacy Policy</a>
+            <a href=""> Terms of Usage</a>
+          </p>   
+          
+           
+          </div>
+        
+      
+    </div>
+  </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
 </body>
 </html>

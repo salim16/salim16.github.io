@@ -375,6 +375,33 @@ p,li,ol,ul{
   color: #66C566;
 }
 
+.bg_white{
+  background: #fff;
+}
+
+}
+.margin_t_30{
+  margin-top : 30px !important ;
+}
+.margin_b_50{
+  margin-bottom : 50px !important ;
+}
+
+.team_member_card{
+  padding: 20px 5px;
+  border-radius: 10px;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -ms-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.team_member_card:hover{
+  cursor: pointer;
+  background: #f8f8f8;
+}
+
   </style>
 
 
@@ -692,7 +719,54 @@ $(document).on('submit','.ajax_form',function(event){
   </div> 
 </div>  
 
+<div class="bg_white" id="team" >
+  <div class="container">
+    <div class="row padding_10 ">
+      <h2 class="header_title text-center"> Our Team </h2> 
+      <hr class="stylish"/>
+      
+      <div class="clearfix"></div>
+      <div class="clearfix margin_t_50 margin_b_50">
+        
+        
 
+        <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_rajan" > 
+          <img class="img img-circle" src="salim.jpg" height="160px" width="160px" alt="">
+            <h4><strong>Mohd Salim </strong></h4>
+            <p> Co-Founder   </p>
+              <p> Wipro Technologies </p>
+            <a href="#"><i class="fa fa-twitter"></i></a> 
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+            <a href="#"><i class="fa fa-linkedin"></i></a> 
+        </div>
 
+        <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_varun" > 
+          <img class="img img-circle" src="akanksha.jpg" height="160px" width="160px" alt="">
+            <h4><strong> Akanksha Tiwari </strong></h4>
+            <p> 
+              Co-Founder 
+            </p>
+            <p> Tata Consultancy Services </p>
+            <a href="#"><i class="fa fa-twitter"></i></a> 
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+            <a href="#"><i class="fa fa-linkedin"></i></a> 
+        </div>
+
+        <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_varun" > 
+          <img class="img img-circle" src="fahad.jpg" height="160px" width="160px" alt="">
+            <h4><strong> Mohd Fahad </strong></h4>
+            <p> 
+              Co-Founder 
+            </p>
+            <p> Tata Consultancy Services </p>
+            <a href="#"><i class="fa fa-twitter"></i></a> 
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+            <a href="#"><i class="fa fa-linkedin"></i></a> 
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

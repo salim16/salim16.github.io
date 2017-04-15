@@ -641,19 +641,13 @@ p,li,ol,ul{
           
           
 
-          <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_rajan" > 
+          <div class="col-lg-6 text-center team_member_card" data-toggle="modal" data-target="#team_modal_rajan" > 
             <img class="img img-circle" src="salim.jpg" height="160px" width="160px" alt="">
               <h4><strong>Mohd Salim </strong></h4>
                 <p> Wipro Technologies </p>
           </div>
 
-          <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_varun" > 
-            <img class="img img-circle" src="akanksha.jpg" height="160px" width="160px" alt="">
-              <h4><strong> Akanksha Tiwari </strong></h4>
-              <p> Tata Consultancy Services </p>
-          </div>
-
-          <div class="col-lg-4 text-center team_member_card" data-toggle="modal" data-target="#team_modal_varun" > 
+          <div class="col-lg-6 text-center team_member_card" data-toggle="modal" data-target="#team_modal_varun" > 
             <img class="img img-circle" src="fahad.jpg" height="160px" width="160px" alt="">
               <h4><strong> Mohd Fahad </strong></h4>
               <p> Tata Consultancy Services </p>
@@ -711,6 +705,13 @@ $(window).scroll(function(){
   } else {
     $('.navbar').removeClass("affixed");
   }
+});
+$('.navbar-nav > li').click(function(event) {
+    event.preventDefault();
+    var target = $(this).find('>a').prop('hash');
+    $('html, body').animate({
+        scrollTop: $(target).offset().top - 50 // this line here
+    }, 500);
 });
 
 </script>
